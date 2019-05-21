@@ -67,3 +67,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 # test-opinno
+
+prueba opinno react
+
+Tenemos que tener node instalado
+
+Tenemos que tener yarn o npm instalado
+
+Ejecutamos package.json
+yarn init
+
+Instalamos yarn como global
+yarn global add create-react app
+
+Instalamos react:
+create-react-app test-opinno
