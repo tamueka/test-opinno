@@ -82,3 +82,11 @@ yarn global add create-react app
 
 Instalamos react:
 create-react-app test-opinno
+
+Nos vamos al directorio del proyecto:
+cd test-opinno
+
+Iniciamos proyecto: 
+yarn start
+
+Creamos nuestro primer componente
