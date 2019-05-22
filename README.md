@@ -89,4 +89,5 @@ cd test-opinno
 Iniciamos proyecto: 
 yarn start
 
-Creamos nuestro primer componente
+Creamos nuestros componentes en App.js
+App, FilmsCard, Films
