@@ -18,7 +18,7 @@ export default class Cards extends Component {
 
       <Container>
         <Row>
-          <Col>
+          <Col xs={12} md={12} xl={12}>
             <Card>
               <CardImg top height="350px" width="100%" src={logo} alt="Logo" />
               <CardBody>
