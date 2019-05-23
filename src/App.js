@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import * as films from './films.json'
 import './App.css';
+import logo from './assets/star-wars.jpg'
+
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle } from 'reactstrap';
 
 function searchingFor(term){
   return function(x){
@@ -49,14 +53,18 @@ export class FilmsCard extends Component {
   }
   render() {
     return (
-      <div className="filmsCard">
-        <h1>Start Wars</h1>
-        <p>Titulo: {this.props.title}</p>
-        <p>Director: {this.props.director}</p>
-        <p>Productor: {this.props.producer}</p>
-        <p>Url: {this.props.url}</p>
-        <p>Episode: {this.props.episode}</p>
-      </div>
+
+    <div>
+      <Card>
+        <CardImg top width="100%" src={logo} alt="Card image cap" />
+        <CardBody>
+          <CardTitle>Titulo: {this.props.title}</CardTitle>
+          <CardSubtitle>Director: {this.props.director}</CardSubtitle>
+          <CardText>Productor: {this.props.producer}</CardText>
+          <CardText>Episodio: {this.props.episode}</CardText>
+        </CardBody>
+      </Card>
+    </div>
     );
   }
 }
