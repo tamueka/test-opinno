@@ -3,8 +3,9 @@ import * as films from './films.json'
 import './App.css';
 import logo from './assets/star-wars.jpg'
 
+
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle } from 'reactstrap';
+  CardTitle, CardSubtitle, Container, Row, Col, Input } from 'reactstrap';
 
 function searchingFor(term){
   return function(x){
@@ -29,8 +30,8 @@ export default class Films extends Component {
   render (){
     const {term, films} = this.state;
     return(
-        <div className="filmsCard">
-          <input type="text" 
+        <div>
+          <Input type="text" 
                   onChange={this.searchHandler}
                   value={term}
                   placeholder="Search..."
@@ -54,17 +55,21 @@ export class FilmsCard extends Component {
   render() {
     return (
 
-    <div>
-      <Card>
-        <CardImg top width="100%" src={logo} alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Titulo: {this.props.title}</CardTitle>
-          <CardSubtitle>Director: {this.props.director}</CardSubtitle>
-          <CardText>Productor: {this.props.producer}</CardText>
-          <CardText>Episodio: {this.props.episode}</CardText>
-        </CardBody>
-      </Card>
-    </div>
+      <Container>
+        <Row>
+          <Col>
+            <Card>
+              <CardImg top height="350px" width="100%" src={logo} alt="Logo" />
+              <CardBody>
+                <CardTitle>Titulo: {this.props.title}</CardTitle>
+                <CardSubtitle>Director: {this.props.director}</CardSubtitle>
+                <CardText>Productor: {this.props.producer}</CardText>
+                <CardText>Episodio: {this.props.episode}</CardText>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
