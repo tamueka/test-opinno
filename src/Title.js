@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-export class App extends Component {
+export default class Title extends Component {
   render (){
     return(
         <div className="StarWars">
