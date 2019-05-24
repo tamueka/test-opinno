@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as films from '../Data/films.json';
-import { Input, Container, Row, Col, Card } from 'reactstrap';
+import { Input, Container, Row, Col } from 'reactstrap';
 import Cards from './Card'
 
 
@@ -30,20 +30,23 @@ export default class Films extends Component {
     return(
         <Container>
             <Row>
-                 <Col xs={9} md={9} xl={9}>
-                    <Card>
+                 <Col xs={6} md={6} xl={6}>
                         <Input  type="text" 
                         onChange={this.searchHandler}
                         value={term}
                         placeholder="Search..."
                         />
-
+                  </Col>
+                  <Col xs={9} md={9} xl={9}> 
                     { films.filter(searchingFor(term)).map((ch, i) =>
-                     <Cards key={i} title={ch.title} director={ch.director} 
-                    producer={ch.producer} url={ch.url} episode={ch.episode_id} />
+                    <Cards key={i} 
+                    title={ch.title} 
+                    director={ch.director} 
+                    producer={ch.producer} 
+                    url={ch.url} 
+                    episode={ch.episode_id} />
                     )}
-                    </Card>
-                </Col>
+                  </Col>
             </Row>
         </Container>
         );
