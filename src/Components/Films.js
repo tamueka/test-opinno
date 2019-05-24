@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as films from './Data/films.json';
+import * as films from '../Data/films.json';
 import { Input, Container, Row, Col, Card } from 'reactstrap';
 import Cards from './Card'
 

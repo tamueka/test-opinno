@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './Assets/star-wars.jpg'
+import logo from '../Assets/star-wars.jpg'
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap';
 import Title from './Title'
