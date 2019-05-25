@@ -6,7 +6,7 @@ import FilmDetail from './Components/FilmDetail';
 import Carrusel from './Components/Carrusel'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Error404  from './Components/Error404'
+import Error404  from './Components/Error404';
 
 import { NavLink, Switch } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom';  //podemos utilizar HashRouter

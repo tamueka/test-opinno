@@ -44,7 +44,8 @@ export default class Films extends Component {
                     director={ch.director} 
                     producer={ch.producer} 
                     url={ch.url} 
-                    episode={ch.episode_id} />
+                    episode={ch.episode_id} 
+                    />
                     )}
                   </Col>
             </Row>
