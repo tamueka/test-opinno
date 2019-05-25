@@ -12,17 +12,16 @@ export default class FilmDetail extends Component{
 
   componentDidMount(){
     let id = this.props.match.params.id;
-    console.log(id)
-    films.results.forEach((c) => {
-      if (c.episode_id === id) {
-        this.setState({ film:c })
+    films.results.forEach((ch) => {
+      if (ch.episode_id === id) {
+        this.setState({ film: ch })
       }
     });
   }
   
 
   render() {
-    if (this.state.film) {
+    if (!this.state.film) {
       return <div></div>
     }
     let ch = this.state.film;
