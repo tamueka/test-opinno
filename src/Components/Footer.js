@@ -1,14 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
+import { Navbar } from 'reactstrap'
 
 export class Footer extends React.Component{
     render(){
         return(
+            <Navbar style={{backgroundColor: 'yellow'}} color="faded" light>
             <div className="menu">
-                <NavLink to="/index">Home</NavLink>
-                <NavLink to="/carrusel">Carrusel</NavLink>
-                <p>Samuel ruiz de la Rosa</p>
+            <p></p>
             </div>
+            </Navbar>
         );
     }
 }

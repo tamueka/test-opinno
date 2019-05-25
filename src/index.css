@@ -15,3 +15,7 @@ code {
 .active{
   background-color: yellow;
 }
+
+.menu{
+  text-align: center;
+}
