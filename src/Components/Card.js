@@ -14,7 +14,7 @@ export default class Cards extends Component {
         <Row>
           <Col xs={12} md={12} xl={12}>
             <Card>
-              <CardImg top height="350px" width="100%" src={logo} alt="Logo" />
+              <CardImg top src={logo} alt="Logo" />
               <Link to = {"/film/" + this.props.episode} >
               <CardBody>
                 <CardTitle>Titulo: {this.props.title}</CardTitle>

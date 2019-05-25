@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./Assets/background.jpg")
 }
 
 code {
@@ -18,4 +19,14 @@ code {
 
 .menu{
   text-align: center;
+}
+
+a{
+  color:black;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
