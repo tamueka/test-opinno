@@ -12,9 +12,10 @@ export default class FilmDetail extends Component{
 
   componentDidMount(){
     let id = this.props.match.params.id;
-    films.results.forEach((ch) => {
-      if (ch.episode_id === id) {
-        this.setState({ film: ch })
+    console.log(id)
+    films.results.forEach((c) => {
+      if (c.episode_id === id) {
+        this.setState({ film: c })
       }
     });
   }
@@ -24,18 +25,19 @@ export default class FilmDetail extends Component{
     if (!this.state.film) {
       return <div></div>
     }
+    
     let ch = this.state.film;
     return (
       <Container>
         <Row>
           <Col xs={12} md={12} xl={12}>
-                <Cards
-                    title={ch.title} 
-                    director={ch.director} 
-                    producer={ch.producer} 
-                    url={ch.url} 
-                    episode={ch.episode_id} 
-                    />
+            <Cards
+              title={ch.title} 
+              director={ch.director} 
+              producer={ch.producer} 
+              url={ch.url} 
+              episode={ch.episode_id} 
+            />
           </Col>
         </Row>
       </Container>

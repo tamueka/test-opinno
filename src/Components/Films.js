@@ -30,24 +30,24 @@ export default class Films extends Component {
     return(
         <Container>
             <Row>
-                 <Col xs={6} md={6} xl={6}>
-                        <Input  type="text" 
+              <Col xs={6} md={6} xl={6}>
+                <Input  type="text" 
                         onChange={this.searchHandler}
                         value={term}
                         placeholder="Search..."
-                        />
-                  </Col>
-                  <Col xs={9} md={9} xl={9}> 
-                    { films.filter(searchingFor(term)).map((ch, i) =>
-                    <Cards key={i} 
-                    title={ch.title} 
-                    director={ch.director} 
-                    producer={ch.producer} 
-                    url={ch.url} 
-                    episode={ch.episode_id} 
-                    />
-                    )}
-                  </Col>
+                />
+              </Col>
+              <Col xs={9} md={9} xl={9}> 
+                 { films.filter(searchingFor(term)).map((ch, i) =>
+                  <Cards key={i} 
+                        title={ch.title} 
+                        director={ch.director} 
+                        producer={ch.producer} 
+                        url={ch.url} 
+                        episode={ch.episode_id} 
+                  />
+                  )}
+              </Col>
             </Row>
         </Container>
         );
