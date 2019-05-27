@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Error404  from './Components/Error404';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  //podemos utilizar HashRouter
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';  //podemos utilizar HashRouter
 
 import { Header }  from './Components/Header';
 import { Footer }  from './Components/Footer'
@@ -21,9 +21,10 @@ ReactDOM.render(
         <div>
             <Header />
             <Switch>
-                <Route path="/index" component={ Films } />
-                <Route path="/films/:episode_id" component={ FilmDetail } />
-                <Route path="/carrusel" component={Carrusel} />
+                <Redirect exact from="/" to="/index"/>
+                <Route exact path="/index" component={ Films } />
+                <Route exact path="/films/:episode_id" component={ FilmDetail } />
+                <Route exact path="/carrusel" component={Carrusel} />
                 <Route component={Error404} />
             </Switch>
             <Footer />
