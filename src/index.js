@@ -22,7 +22,7 @@ ReactDOM.render(
             <Header />
             <Switch>
                 <Route path="/index" component={ Films } />
-                <Route path="/film/:id(\d)" component={ FilmDetail } />
+                <Route path="/films/:episode_id" component={ FilmDetail } />
                 <Route path="/carrusel" component={Carrusel} />
                 <Route component={Error404} />
             </Switch>
